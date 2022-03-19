@@ -16,10 +16,12 @@ public class MoveRight : MonoBehaviour
 
 
     // Update is called once per frame
+#pragma warning disable IDE0051 // Remove unused private members
     void Update()
+#pragma warning restore IDE0051 // Remove unused private members
     {
         // změna pozice na plátně
-        transform.position = new Vector2(transform.position.x + speed * Time.fixedDeltaTime, transform.position.y);
+        transform.position = new Vector2(transform.position.x + speed * Time.fixedDeltaTime, transform.position.y - speed * Time.fixedDeltaTime);
                 // nutné použít Time.fixedDeltaTime, samotný deltaTime by byl na konci hry nulový a pozice by se tak nemohla změnit
 
 
@@ -27,14 +29,6 @@ public class MoveRight : MonoBehaviour
         if (transform.position.y <= endY)
         {
             transform.position = new Vector2(startX, startY);
-        }
-
-
-        // až při detaTime == 0 přestane fungovat gravitace, pozice na ose Y se bude stále měnit - náhrada gravitace
-        if (Time.deltaTime == 0)
-        {
-            transform.position
-                = new Vector2(transform.position.x + speed/2 * Time.fixedDeltaTime, transform.position.y - speed * Time.fixedDeltaTime);
         }
 
         // pád asteroidu*

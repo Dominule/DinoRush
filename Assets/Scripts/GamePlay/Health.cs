@@ -29,8 +29,6 @@ public class Health : MonoBehaviour
         health = PlayerPrefs.GetInt("HealthPoints", 1);     // načte počet životů, se kterými se začíná
 
         // podmínkové řešení vykreslení životů
-        RebuildHP();
-
         if (health > 0)
         {
             HP1.SetActive(true);

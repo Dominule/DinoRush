@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // program zajišťuje pohyb doleva (pohyb překážek a pozadí)

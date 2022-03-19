@@ -54,7 +54,6 @@ public class ScoreStarHalter : MonoBehaviour
                 {
                     Star3.SetActive(true);
                     MinusStar3.SetActive(false);
-                    Debug.Log("3");
 
                     if (steadyStar > 3)
                     {

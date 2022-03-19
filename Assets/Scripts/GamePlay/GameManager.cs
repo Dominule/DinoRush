@@ -50,5 +50,5 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GamePlay");     // obnovení scény GamePlay
     }
 
-    
+
 }
